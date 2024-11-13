@@ -6,6 +6,7 @@
 # include <stdio.h>
 
 int ft_atoi(const char *str);
+int ft_isalpha (int c);
 size_t ft_strlen(const char *str);
 
 #endif
