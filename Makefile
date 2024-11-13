@@ -1,5 +1,17 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: kchatela <kchatela@student.42berlin.d      +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2024/11/13 15:09:03 by kchatela          #+#    #+#              #
+#    Updated: 2024/11/13 15:09:11 by kchatela         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 NAME = libft.a  #The build target name (executable/ library)
-SRC = ft_atoi.c ft_strlen.c ft_isalpha.c ft_isdigit.c #Variable containing all .c files required to build the project
+SRC = ft_atoi.c ft_strlen.c ft_isalpha.c ft_isdigit.c ft_isalnum.c #Variable containing all .c files required to build the project
 OBJS := $(SRC:%.c=%.o) #Converts all c files in SRC to object files. Using := ensures that this transformation happens once
 CC = gcc #compiler
 CCFLAGS = -Wall -Werror -Wextra #compiler flags
