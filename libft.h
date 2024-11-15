@@ -6,7 +6,7 @@
 /*   By: kchatela <kchatela@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 15:09:23 by kchatela          #+#    #+#             */
-/*   Updated: 2024/11/13 15:12:56 by kchatela         ###   ########.fr       */
+/*   Updated: 2024/11/15 16:31:38 by kchatela         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,11 @@
 int ft_atoi(const char *str);
 int ft_isalpha (int c);
 int ft_isdigit (int c);
+int ft_isprint (int c);
 int ft_isalnum(int c);
+int ft_isascii(int c);
 size_t ft_strlen(const char *str);
-
+void *ft_memset(void *b, int c, size_t len);
+void ft_bzero(void *s, size_t n);
+void *ft_memcpy(void *dst, const void *src, size_t n);
 #endif
