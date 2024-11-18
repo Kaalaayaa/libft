@@ -6,7 +6,7 @@
 /*   By: kchatela <kchatela@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 15:09:23 by kchatela          #+#    #+#             */
-/*   Updated: 2024/11/15 16:31:38 by kchatela         ###   ########.fr       */
+/*   Updated: 2024/11/18 18:06:06 by kchatela         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,4 +27,7 @@ size_t ft_strlen(const char *str);
 void *ft_memset(void *b, int c, size_t len);
 void ft_bzero(void *s, size_t n);
 void *ft_memcpy(void *dst, const void *src, size_t n);
+void *ft_memmove(void *dst, const void *src, size_t len);
+size_t ft_strlcpy(char *dst, const char *src, size_t dstsize);
+
 #endif

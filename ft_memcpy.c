@@ -6,7 +6,7 @@
 /*   By: kchatela <kchatela@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 15:25:09 by kchatela          #+#    #+#             */
-/*   Updated: 2024/11/15 17:09:23 by kchatela         ###   ########.fr       */
+/*   Updated: 2024/11/18 19:46:26 by kchatela         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void *ft_memcpy(void *dst, const void *src, size_t n)
 
     if(!dst || !src)
     {
-        return dst;
+        return (NULL);
     }
     
     temp_dst = (unsigned char *) dst;
