@@ -6,7 +6,7 @@
 /*   By: kchatela <kchatela@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 17:54:53 by kchatela          #+#    #+#             */
-/*   Updated: 2024/11/18 18:27:44 by kchatela         ###   ########.fr       */
+/*   Updated: 2024/11/19 16:33:33 by kchatela         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,4 +27,17 @@ size_t ft_strlcpy(char *dst, const char *src, size_t dstsize)
         dst[dstsize - 1] = 0;
     }
     return (src_len);
+}
+
+int main(void)
+{
+    char dst[50] = "Hello, ";
+    const char *src = "world!";
+    size_t dstsize = 50;
+
+    size_t result = ft_strlcat(dst, src, dstsize);
+    printf("Resulting string: %s\n", dst);
+    printf("Total length: %zu\n", result);
+    
+    return 0;
 }
