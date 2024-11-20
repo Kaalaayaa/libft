@@ -1,22 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kchatela <kchatela@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/20 14:07:18 by kchatela          #+#    #+#             */
-/*   Updated: 2024/11/20 14:24:30 by kchatela         ###   ########.fr       */
+/*   Created: 2024/11/20 14:07:33 by kchatela          #+#    #+#             */
+/*   Updated: 2024/11/20 14:26:42 by kchatela         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_toupper(int c)
+int ft_tolower(int c)
 {
-    if (c >= 97 && c <= 122)
+    if (c >= 65 && c <= 90)
     {
-        return (c - 32);
+        return (c + 32);
     }
     return (c);
 }
@@ -25,7 +25,7 @@ int ft_toupper(int c)
 
 int main(void)
 {
-    printf("uppercase: %c\n", ft_toupper('A' - 1));
-    printf("uppercase: %c\n", ft_toupper('a'));
-    printf("uppercase: %c", ft_toupper('A'));
+    printf("lowercase: %c\n", ft_tolower('a' - 1));
+    printf("lowercase: %c\n", ft_tolower('a'));
+    printf("lowercase: %c\n", ft_tolower('A'));
 }
