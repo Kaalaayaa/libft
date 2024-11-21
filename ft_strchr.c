@@ -6,13 +6,13 @@
 /*   By: kchatela <kchatela@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/20 14:30:06 by kchatela          #+#    #+#             */
-/*   Updated: 2024/11/20 15:29:42 by kchatela         ###   ########.fr       */
+/*   Updated: 2024/11/21 16:47:31 by kchatela         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *strchr(const char *s, int c)
+char *ft_strchr(const char *s, int c)
 {
     int i;
 
@@ -39,7 +39,7 @@ int main(void)
     char s[] = "Kalaya";
     char c = 'a';
     
-    char *result = strchr(s, c);
+    char *result = ft_strchr(s, c);
     
     if (result != NULL)
     {
