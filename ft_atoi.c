@@ -6,39 +6,38 @@
 /*   By: kchatela <kchatela@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 12:25:17 by kchatela          #+#    #+#             */
-/*   Updated: 2024/11/12 17:22:46 by kchatela         ###   ########.fr       */
+/*   Updated: 2024/11/25 18:25:14 by kchatela         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_atoi(const char *str)
+int	ft_atoi(const char *str)
 {
-    int i;
-    int sign;
-    int nbr;
-    
-    i = 0;
-    sign = 1;
-    nbr = 0;
-    while (str[i] == ' ' || (str[i] >= 9 && str[i] <= 13))
-    {
-        i++;
-    }
-    if (str[i] == '-')
-    {
-        sign = -1;
-        i++;
-    } else if (str[i] == '+')
-    {
-        i++;
-    }
-    while (str[i] >= '0' && str[i] <= '9')
-    {
-        nbr = nbr * 10 + (str[i] - '0');
-        i++;
-    }
-    return (sign * nbr);
+	int	i;
+	int	sign;
+	int	nbr;
+
+	i = 0;
+	sign = 1;
+	nbr = 0;
+	while (str[i] == ' ' || (str[i] >= 9 && str[i] <= 13))
+		i++;
+	if (str[i] == '-')
+	{
+		sign = -1;
+		i++;
+	}
+	else if (str[i] == '+')
+	{
+		i++;
+	}
+	while (str[i] >= '0' && str[i] <= '9')
+	{
+		nbr = nbr * 10 + (str[i] - '0');
+		i++;
+	}
+	return (sign * nbr);
 }
 
 /*#include <stdlib.h>

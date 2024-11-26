@@ -6,7 +6,7 @@
 /*   By: kchatela <kchatela@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/20 14:30:06 by kchatela          #+#    #+#             */
-/*   Updated: 2024/11/21 16:47:31 by kchatela         ###   ########.fr       */
+/*   Updated: 2024/11/25 16:42:46 by kchatela         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ char *ft_strchr(const char *s, int c)
     return (NULL);
 }
 
-#include <stdio.h>
+/*#include <stdio.h>
 
 int main(void)
 {
@@ -51,4 +51,4 @@ int main(void)
     }
 
     return 0;
-}
+}*/

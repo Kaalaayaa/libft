@@ -6,7 +6,7 @@
 /*   By: kchatela <kchatela@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/20 18:35:13 by kchatela          #+#    #+#             */
-/*   Updated: 2024/11/21 16:44:44 by kchatela         ###   ########.fr       */
+/*   Updated: 2024/11/25 14:52:45 by kchatela         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ char *ft_strnstr(const char *haystack, const char *needle, size_t len)
     return (NULL);
 }
 
-#include "libft.h"
+/*#include "libft.h"
 #include <stdio.h>
 
 int main(void)
@@ -76,4 +76,4 @@ int main(void)
     printf("Test 6: %s\n", ft_strnstr(haystack6, needle6, 13));  // Should print: Hello, world!
 
     return 0;
-}
+}*/

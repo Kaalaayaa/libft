@@ -6,31 +6,33 @@
 /*   By: kchatela <kchatela@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 16:50:43 by kchatela          #+#    #+#             */
-/*   Updated: 2024/11/21 18:14:59 by kchatela         ###   ########.fr       */
+/*   Updated: 2024/11/25 16:53:04 by kchatela         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *ft_calloc(size_t count, size_t size)
+void	*ft_calloc(size_t count, size_t size)
 {
-    unsigned char *tmp;
-    size_t i;
+	size_t		i;
+	unsigned char	*tmp;
 
-    i = 0;
-    
-    tmp = malloc(count * size);
-
-    if (!tmp)
-    {
-        return (NULL);
-    }
-    while(i < count * size)
-    {
-        tmp[i] = 0;
-        i++;
-    }
-    return(tmp);
+	i = 0;
+	if (count == (size_t)-1 || size == (size_t)-1 || (count && size > SIZE_MAX / count))
+	{
+		return (NULL);
+	}
+	tmp = malloc(count * size);
+	if (!tmp)
+	{
+		return (NULL);
+	}
+	while (i < count * size)
+	{
+		tmp[i] = 0;
+		i++;
+	}
+	return (tmp);
 }
 
 // #include <stdio.h>

@@ -6,7 +6,7 @@
 /*   By: kchatela <kchatela@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/20 17:51:42 by kchatela          #+#    #+#             */
-/*   Updated: 2024/11/21 16:46:57 by kchatela         ###   ########.fr       */
+/*   Updated: 2024/11/25 14:52:26 by kchatela         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ int ft_strncmp(const char *s1, const char *s2, size_t n)
     return (0);
 }
 
-#include <stdio.h>
+/*#include <stdio.h>
 #include <string.h>
 
 int	main(void)
@@ -53,4 +53,4 @@ int	main(void)
 	printf("Result 'my' ft_strcmp(): %d\n", ft_strncmp(string1, string2, n));
 
 	return (0);
-}
+}*/

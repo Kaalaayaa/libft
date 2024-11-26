@@ -6,42 +6,37 @@
 /*   By: kchatela <kchatela@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 15:25:09 by kchatela          #+#    #+#             */
-/*   Updated: 2024/11/19 16:28:04 by kchatela         ###   ########.fr       */
+/*   Updated: 2024/11/25 16:29:36 by kchatela         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *ft_memcpy(void *dst, const void *src, size_t n)
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-    unsigned char *temp_dst;
-    unsigned char *temp_src;
+	unsigned char	*temp_dst;
+	unsigned char	*temp_src;
 
-    if(!dst || !src)
-    {
-        return (NULL);
-    }
-    
-    temp_dst = (unsigned char *) dst;
-    temp_src = (unsigned char *) src;
-
-    while (n > 0)
-    {
-        *temp_dst = *temp_src;
-        temp_dst++;
-        temp_src++;
-        n--;
-    }
-    
-    return dst;
-
+	if (!dst && !src)
+	{
+		return (NULL);
+	}
+	temp_dst = (unsigned char *) dst;
+	temp_src = (unsigned char *) src;
+	while (n > 0)
+	{
+		*temp_dst = *temp_src;
+		temp_dst++;
+		temp_src++;
+		n--;
+	}
+	return (dst);
 }
 
-// #include <stdio.h>
-// #include <string.h> // For memcmp (optional, for comparison)
+//#include <stdio.h>
+//#include <string.h> // For memcmp (optional, for comparison)
 
 // void *ft_memcpy(void *dst, const void *src, size_t n);
-
 // int main() {
 //     // Test 1: Basic memory copy with integer arrays
 //     int src[] = {1, 2, 3, 4, 5};

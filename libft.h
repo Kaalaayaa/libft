@@ -6,7 +6,7 @@
 /*   By: kchatela <kchatela@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 15:09:23 by kchatela          #+#    #+#             */
-/*   Updated: 2024/11/21 17:36:11 by kchatela         ###   ########.fr       */
+/*   Updated: 2024/11/25 16:52:58 by kchatela         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <stdio.h>
+#include <stdint.h>
 
 int ft_atoi(const char *str);
 int ft_isalpha (int c);
@@ -39,5 +40,6 @@ void *ft_memchr(const void *s, int c, size_t n);
 int ft_memcmp(const void *s1, const void *s2, size_t n);
 char *ft_strnstr(const char *haystack, const char *needle, size_t len);
 void *ft_calloc(size_t count, size_t size);
+char *ft_strdup(const char *str);
 
 #endif
