@@ -6,7 +6,7 @@
 /*   By: kchatela <kchatela@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 19:42:56 by kchatela          #+#    #+#             */
-/*   Updated: 2024/11/20 14:06:03 by kchatela         ###   ########.fr       */
+/*   Updated: 2024/11/27 15:58:37 by kchatela         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,11 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 
 	src_len = ft_strlen(src);
 	dst_len = ft_strlen(dst);
-	if (dst_len == dstsize)
+	if (dst_len >= dstsize)
 	{
-		return (src_len + dst_len);
+		return (dstsize + src_len);
 	}
-	if (dstsize > dst_len + src_len)
+	if (src_len < dstsize - dst_len)
 	{
 		ft_memcpy(dst + dst_len, src, src_len + 1);
 	}

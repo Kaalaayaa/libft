@@ -6,7 +6,7 @@
 /*   By: kchatela <kchatela@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 15:09:23 by kchatela          #+#    #+#             */
-/*   Updated: 2024/11/25 16:52:58 by kchatela         ###   ########.fr       */
+/*   Updated: 2024/11/27 15:41:28 by kchatela         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,10 @@ char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 char	*ft_strdup(const char *str);
+char	*ft_substr(char const *s, unsigned int start, size_t len);
+char    *ft_strjoin(const char *s1, const char *s2);
+char	*ft_strtrim(char const *s1, char const *set);
+char    **ft_split(char const *s, char c);
 int		ft_atoi(const char *str);
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);

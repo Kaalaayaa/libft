@@ -6,7 +6,7 @@
 #    By: kchatela <kchatela@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/13 15:09:03 by kchatela          #+#    #+#              #
-#    Updated: 2024/11/25 14:54:32 by kchatela         ###   ########.fr        #
+#    Updated: 2024/11/27 15:50:22 by kchatela         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME = libft.a  #The build target name (executable/ library)
 SRC = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c \
  		ft_strlen.c ft_memset.c ft_bzero.c ft_memcpy.c ft_memmove.c ft_strlcpy.c \
 		ft_strlcat.c ft_toupper.c ft_tolower.c ft_strchr.c ft_strrchr.c ft_strncmp.c ft_memchr.c ft_memcmp.c \
-		ft_strnstr.c ft_atoi.c ft_calloc.c ft_strdup.c #Variable containing all .c files required to build the project
+		ft_strnstr.c ft_atoi.c ft_calloc.c ft_strdup.c ft_substr.c ft_strjoin.c ft_strtrim.c#Variable containing all .c files required to build the project
 OBJS := $(SRC:%.c=%.o) #Converts all c files in SRC to object files. Using := ensures that this transformation happens once
 CC = gcc #compiler
 CCFLAGS = -Wall -Werror -Wextra #compiler flags
