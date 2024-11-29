@@ -6,7 +6,7 @@
 /*   By: kchatela <kchatela@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/29 11:07:43 by kchatela          #+#    #+#             */
-/*   Updated: 2024/11/29 11:53:16 by kchatela         ###   ########.fr       */
+/*   Updated: 2024/11/29 15:19:52 by kchatela         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,14 +22,10 @@ static int	int_len(int n)
 		count++;
 		n = -n;
 	}
-	if (n == 0)
+	while (n > 0)
 	{
 		count++;
-	}
-	while (n != 0)
-	{
 		n = n / 10;
-		count++;
 	}
 	return (count);
 }
@@ -37,27 +33,29 @@ static int	int_len(int n)
 char	*ft_itoa(int n)
 {
 	char	*result;
-	int		i;
 	int		len;
 
 	len = int_len(n);
+	if (n == 0)
+		return (ft_strdup("0"));
+	if (n == -2147483648)
+		return (ft_strdup("-2147483648"));
 	result = malloc((len + 1) * sizeof(char));
 	if (!result)
 		return (NULL);
-	result[0] = '0';
+	result[len] = '\0';
+	len--;
 	if (n < 0)
 	{
 		result[0] = '-';
 		n = -n;
 	}
-	i = len - 1;
-	while (n != 0)
+	while (n > 0)
 	{
-		result[i] = ((n % 10) + '0');
+		result[len] = (n % 10) + '0';
 		n = n / 10;
-		i--;
+		len--;
 	}
-	result[len] = '\0';
 	return (result);
 }
 

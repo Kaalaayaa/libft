@@ -6,7 +6,7 @@
 /*   By: kchatela <kchatela@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 12:20:08 by kchatela          #+#    #+#             */
-/*   Updated: 2024/11/26 15:25:04 by kchatela         ###   ########.fr       */
+/*   Updated: 2024/11/29 15:22:01 by kchatela         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	return (str);
 }
 
-/*#include "libft.h"
+/*
 #include <stdio.h>
 
 int main()
