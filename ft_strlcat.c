@@ -6,33 +6,36 @@
 /*   By: kchatela <kchatela@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 19:42:56 by kchatela          #+#    #+#             */
-/*   Updated: 2024/12/02 12:18:10 by kchatela         ###   ########.fr       */
+/*   Updated: 2024/12/02 16:03:44 by kchatela         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
+size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	size_t	src_len;
-	size_t	dst_len;
+	size_t	len_dst;
+	size_t	len_src;
+	size_t	i;
+	size_t	j;
 
-	src_len = ft_strlen(src);
-	dst_len = ft_strlen(dst);
-	if (dst_len >= dstsize)
+	len_src = ft_strlen(src);
+	len_dst = ft_strlen(dst);
+	i = 0;
+	j = len_dst;
+	if (len_dst < size)
 	{
-		return (dstsize + src_len);
-	}
-	if (src_len < dstsize - dst_len)
-	{
-		ft_memcpy(dst + dst_len, src, src_len + 1);
+		while (src[i] && (len_dst + i) < (size - 1))
+		{
+			dst[j] = src[i];
+			i++;
+			j++;
+		}
+		dst[j] = '\0';
 	}
 	else
-	{
-		ft_memcpy(dst + dst_len, src, dstsize -1);
-		dst[dstsize - 1] = '\0';
-	}
-	return (src_len + dst_len);
+		len_dst = size;
+	return (len_dst + len_src);
 }
 
 /*#include <stdio.h>

@@ -6,7 +6,7 @@
 /*   By: kchatela <kchatela@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 16:50:43 by kchatela          #+#    #+#             */
-/*   Updated: 2024/12/02 12:14:14 by kchatela         ###   ########.fr       */
+/*   Updated: 2024/12/02 15:17:01 by kchatela         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	*ft_calloc(size_t count, size_t size)
 	unsigned char		*tmp;
 
 	i = 0;
-	if (count == (size_t)-1 || size == (size_t)-1 
+	if (count == (size_t)-1 || size == (size_t)-1
 		|| (count && size > SIZE_MAX / count))
 	{
 		return (NULL);
