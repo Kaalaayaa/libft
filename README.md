@@ -1,101 +1,85 @@
-# libft
+# Libft
 
-**libft** is a custom C library created for the **42 School** curriculum. It provides a collection of commonly-used functions that are typically included in the C standard library, as well as some additional utility functions. The goal of this project is to implement these functions from scratch, reinforcing understanding of memory management, algorithmic thinking, and the fundamentals of C programming.
+Libft is a personal project for the 42 School, which involves creating your own C standard library. This project requires you to implement commonly used functions from the C standard library, such as memory management, string manipulation, and others. The goal is to master basic C programming concepts and improve understanding of low-level system operations.
 
 ## Table of Contents
 
-- [Overview](#overview)
-- [List of Functions](#list-of-functions)
-- [Installation](#installation)
+- [About](#about)
+- [Functions Implemented](#functions-implemented)
 - [Usage](#usage)
 
-## Overview
+## About
 
-This project involves creating a **libft** library, implementing various functions like string manipulation, memory management, and other utilities in pure C. The library is intended to replace the standard C library for some functions, giving you full control over memory handling and implementation details.
+Libft aims to recreate a subset of the C standard library, allowing students to use their own custom implementations of fundamental functions. You will need to implement various utility functions, such as string manipulation, memory handling, and other common operations that are essential for building robust C applications.
 
-### Key Features:
-- Custom implementations of standard C library functions
-- Provides utility functions for efficient memory and string manipulation
-- Useful for other projects that require these basic functionalities
+By the end of this project, you will have a solid understanding of C, pointers, memory management, and algorithms. The functions implemented in this project are meant to help you in future 42 projects where standard library functions might be restricted.
 
-## List of Functions
+## Functions Implemented
 
-Here is a list of functions that are implemented in **libft**:
+Here are some of the main categories and functions that you will implement in this project:
 
-### Memory Management
-- `ft_memset`: Set a block of memory to a specific value.
-- `ft_bzero`: Set a block of memory to zero.
-- `ft_memcpy`: Copy a block of memory from one location to another.
-- `ft_memccpy`: Copy memory with a limit.
-- `ft_memmove`: Move a block of memory, safely handling overlap.
-- `ft_memchr`: Search a block of memory for a specific character.
-- `ft_memcmp`: Compare two blocks of memory.
-- `ft_calloc`: Allocate memory for an array and initialize it to zero.
+### Memory Functions
+- `ft_memset()`
+- `ft_bzero()`
+- `ft_memcpy()`
+- `ft_memccpy()`
+- `ft_memmove()`
+- `ft_memcmp()`
+- `ft_calloc()`
+- `ft_strdup()`
 
-### String Manipulation
-- `ft_strlen`: Return the length of a string.
-- `ft_strdup`: Duplicate a string.
-- `ft_strcpy`: Copy one string into another.
-- `ft_strncpy`: Copy a specified number of characters from one string to another.
-- `ft_strcat`: Concatenate two strings.
-- `ft_strncat`: Concatenate a specified number of characters from one string to another.
-- `ft_strchr`: Find the first occurrence of a character in a string.
-- `ft_strrchr`: Find the last occurrence of a character in a string.
-- `ft_strstr`: Find the first occurrence of a substring in a string.
-- `ft_strnstr`: Find the first occurrence of a substring in the first n characters of a string.
-- `ft_strcmp`: Compare two strings.
-- `ft_strncmp`: Compare the first n characters of two strings.
+### String Functions
+- `ft_strlen()`
+- `ft_strdup()`
+- `ft_strcpy()`
+- `ft_strncpy()`
+- `ft_strcat()`
+- `ft_strncat()`
+- `ft_strlcat()`
+- `ft_strchr()`
+- `ft_strrchr()`
+- `ft_strstr()`
+- `ft_strnstr()`
+- `ft_strcmp()`
+- `ft_strncmp()`
+- `ft_atoi()`
+- `ft_itoa()`
 
-### Character Handling
-- `ft_isalpha`: Check if a character is alphabetic.
-- `ft_isdigit`: Check if a character is a digit.
-- `ft_isalnum`: Check if a character is alphanumeric.
-- `ft_isascii`: Check if a character is an ASCII character.
-- `ft_isprint`: Check if a character is printable.
-- `ft_toupper`: Convert a character to uppercase.
-- `ft_tolower`: Convert a character to lowercase.
+### Character Functions
+- `ft_isalpha()`
+- `ft_isdigit()`
+- `ft_isalnum()`
+- `ft_isascii()`
+- `ft_isprint()`
+- `ft_toupper()`
+- `ft_tolower()`
 
-### Utility Functions
-- `ft_atoi`: Convert a string to an integer.
-- `ft_itoa`: Convert an integer to a string.
-- `ft_strsplit`: Split a string into an array of substrings.
-- `ft_strjoin`: Join two strings into a new string.
-- `ft_strtrim`: Trim whitespace from both ends of a string.
-- `ft_lstnew`: Create a new linked list element.
-- `ft_lstadd`: Add an element to the beginning of a linked list.
-- `ft_lstmap`: Apply a function to each element of a linked list.
-- `ft_lstiter`: Iterate over a linked list.
+### List Functions
+- `ft_lstnew()`
+- `ft_lstadd_front()`
+- `ft_lstadd_back()`
+- `ft_lstdelone()`
+- `ft_lstclear()`
+- `ft_lstiter()`
+- `ft_lstmap()`
 
-## Installation
+### Additional Functions
+- `ft_putchar_fd()`
+- `ft_putstr_fd()`
+- `ft_putendl_fd()`
+- `ft_putnbr_fd()`
 
-To use the **libft** library in your own C project, follow these steps:
+## Usage
 
-1. Clone this repository:
+To use the functions in your C programs, simply copy the necessary source files and header file into your project and link them appropriately. You can include `libft.h` and call any of the implemented functions in your C code.
 
-   ```bash
-   git clone https://github.com/yourusername/libft.git
-Navigate to the project directory:
+Here is an example of how to use one of the functions:
 
-bash
-Copy code
-cd libft
-Compile the library:
+```c
+#include "libft.h"
 
-bash
-Copy code
-make
-To clean up compiled object files:
-
-bash
-Copy code
-make clean
-To remove all generated files (objects and the library):
-
-bash
-Copy code
-make fclean
-To recompile the library after making changes:
-
-bash
-Copy code
-make re
+int main() {
+    char *str = "Hello, Libft!";
+    printf("Length of string: %zu\n", ft_strlen(str));
+    return 0;
+}
