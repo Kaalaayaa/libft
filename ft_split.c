@@ -88,6 +88,8 @@ char	**ft_split(char const *s, char c)
 	return (result);
 }
 
+test
+
 /*#include <stdio.h>
 
 int main(void)
